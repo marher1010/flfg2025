@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="ScreenOrientation" content="autoRotate:disabled">
+    <title>Finger Lakes Financial Group</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='media/icon.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mobile/login_mobile.css') }}">
+
+    <script src=" https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
+        </script>
+</head>
+
+<h1 class="title">DISCLOSURES</h1><br>
+
+
+<div class="navigation">
+    <button id="sized" class="menu">
+        <span></span>
+    </button>
+    <div id="myModal" class="modalx">
+        <!-- Modal content -->
+        <div class="modal-content animated           zoomIn">
+
+            <div class="modal-header">
+                <span class="close">×</span>
+            </div>
+            <div class="modal-body nav">
+                <ul>
+                    <li><a class="one" href="/">HOME</a></li>
+                    <li><a class="two" href="/services00">SERVICES</a></li>
+                    <li><a class="three" href="/advisors00">ADVISORS</a></li>
+                    <li><a class="four" href="/login00">LOGIN</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<p>
+    Paul Sypher, Raymond O'Bannion, and Christopher Saunders offer financial planning and
+    investment
+    advisory services and programs through Pruco Securities, LLC (Pruco), under the marketing
+    name
+    Prudential Financial Planning Services (PFPS), pursuant to a separate client agreement.
+    Offering
+    insurance and securities products and services as a registered representative of Pruco and
+    an
+    agent of issuing insurance companies. 1-800-778-2255. Finger Lakes Financial Group and its
+    representatives do not render tax or legal advice. Please consult with your own advisors
+    regarding your particular situation.
+    <br>Nathan Melfi offers investment advisory services and programs through Pruco Securities,
+    LLC
+    (Pruco), under the marketing name Prudential Financial Planning Services (PFPS), pursuant to
+    a
+    separate client agreement. Offering insurance and securities products and services as a
+    registered representative of Pruco and an agent of issuing insurance companies.
+    <br><br>Licenses and State Registrations:
+    <br>Securities: AZ, CA, CO, CT, DC, FL, GA, HI, MA, MI, NC, NV, NY, OH, PA, RI, SC, TN, TX,
+    VA,
+    WA
+    <br>Life Insurance: FL, GA, MA, MI, NC, NJ, NY, PA, TN, TX, VA, WY
+    <br>Variable Life Insurance: FL, GA, MA, MI, NC, NY, PA, TN, TX, VA
+    <br>Mutual Funds: AZ, CA, CO, CT, DC, FL, GA, HI, MA, MI, NC, NV, NY, OH, PA, RI, SC, TN,
+    TX,
+    VA, WA
+    <br>Fixed Annuities: FL, GA, MA, MI, NC, NY, PA, TN, TX, VA
+    <br>Variable Annuities: FL, GA, MA, MI, NC, NY, PA, TN, TX, VA
+    <br><br>eMoney is intended for informational purposes only and is not intended to replace
+    official account statements from the sponsor or custodian. As always, you should refer to
+    your
+    official account statements to compile a complete and accurate inventory of your accounts.
+    You
+    are also strongly encouraged to review your official account statements and compare them
+    against
+    the values and other information contained on your eMoney website. In the case of any
+    discrepancy, you should rely on your official account statements as the most accurate source
+    of
+    information. Questions regarding any account listed should be directed to the customer
+    contact
+    information identified on the official account statement. Assets may not be covered by SIPC.
+    <br><br>Control Number: 1067792-00002-00
+</p>
+
+<script>
+    // Get Modal
+    var modal = document.getElementById('myModal');
+
+    // Get pseudoelement to open Modal
+    var btn = document.getElementById("sized");
+
+    // Get the <span> element to close Modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When user clicks button, open Modal
+    btn.onclick = function () {
+        modal.style.display = "block";
+    };
+
+    // When user clicks Close (x), close Modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    };
+
+    // When user clicks anywhere outside of the Modal, close Modal
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+</script>
+
+</html>

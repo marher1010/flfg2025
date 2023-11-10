@@ -1,0 +1,421 @@
+@import url('https://fonts.cdnfonts.com/css/verdana');
+
+
+@media (max-width: 768px) {
+
+
+    * {
+        font-family: 'Verdana', sans-serif;
+        overflow-x: hidden;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .bottom-footer {
+        height: 10vh;
+        position: absolute;
+    }
+
+
+    .card-container {
+        position: relative;
+        left: 1vh;
+        top: 1vh;
+        overflow-y: scroll;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin-top: 10vh;
+        margin-bottom: 10vh;
+    }
+
+
+
+    .panel-container {
+        width: 100vw;
+        box-sizing: border-box;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        overflow-y: hidden;
+    }
+
+    .panel {
+        width: 45vw;
+        height: 50vh;
+        text-align: center;
+        margin: 1.5%;
+        background: rgba(255, 255, 255);
+        border-radius: 10px;
+        padding: 2.5%;
+        border: 1px solid black;
+        transition: color 0.5s, background-color 0.5s;
+        animation: on .6s ease-in-out 4s forwards;
+        box-sizing: border-box;
+        box-shadow: 0 0 8.5px rgb(0, 0, 0, .4);
+        overflow-y: hidden;
+
+    }
+
+    .panel img {
+        height: 140px;
+        width: 140px;
+        border-radius: 50%;
+        border: 2px solid black;
+        overflow-y: hidden;
+
+    }
+
+    .panel .name {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        overflow-y: hidden;
+
+    }
+
+    .panel .position,
+    .panel .location {
+        white-space: nowrap;
+        font-size: small;
+        padding-top: 0;
+        margin: 0;
+        overflow-y: hidden;
+
+    }
+
+    .panel .location {
+        padding-bottom: 10px;
+        border-bottom: 2px solid black;
+        overflow-y: hidden;
+
+    }
+
+    .panel .background {
+        text-align: justify;
+        font-size: 13px;
+        overflow-y: hidden;
+
+    }
+
+    .panel .socials {
+        display: flex;
+        margin: 2.5px;
+        font-size: 20px;
+        justify-content: space-between;
+    }
+
+    .panel .socials a {
+        text-decoration: none;
+        margin: 0 10px;
+        text-align: center;
+        width: 32.5px;
+        height: 32.5px;
+        overflow: visible;
+    }
+
+    .panel .socials a img {
+        width: 32.5px;
+        height: 32.5px;
+        display: inline-block;
+        border: none;
+        overflow: visible;
+        
+    }
+
+
+    .navigation {
+        display: block;
+        position: absolute;
+        top: 0vw;
+        right: 0vw;
+        z-index: 10;
+        margin: 0;
+        padding: 0;
+    }
+
+    .title {
+        position: relative;
+        top: 2.5vh;
+        left: 2.5vh;
+        text-align: left;
+    }
+
+    h1.title {
+        font-weight: lighter;
+    }
+
+    /*Burger-Menu*/
+
+    .menu {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        margin: 25px;
+        overflow-x: visible;
+    }
+
+    .menu span {
+        margin: 0 auto;
+        position: relative;
+        top: 12px;
+        overflow-x: visible;
+
+    }
+
+    .menu span:before,
+    .menu span:after {
+        position: absolute;
+        content: '';
+        overflow-x: visible;
+
+    }
+
+    .menu span,
+    .menu span:before,
+    .menu span:after {
+        width: 30px;
+        height: 3px;
+        background-color: #000000;
+        display: block;
+        overflow-x: visible;
+
+    }
+
+    .menu span:before {
+        margin-top: -12px;
+        overflow-x: visible;
+
+    }
+
+    .menu span:after {
+        margin-top: 12px;
+        overflow-x: visible;
+
+    }
+
+    /*Fake-Trigger*/
+    #sized {
+        width: 60px;
+        height: 50px;
+        color: transparent;
+        background-color: transparent;
+        border: transparent;
+    }
+
+    /*Modal-Box*/
+    .modalx {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding: 0.5%;
+        margin: 0;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: none;
+    }
+
+    .modal-content {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        -webkit-animation-name: animatetop;
+        -webkit-animation-duration: 0.4s;
+        animation-name: animatetop;
+        animation-duration: 0.4s;
+        background-color: #ffffff;
+        font-family: 'Verdana', sans-serif;
+
+    }
+
+    .modal-header {
+        padding: 2px 16px;
+        background-color: #ffffff;
+        border-bottom: none;
+        height: 20vh;
+    }
+
+    .modal-body {
+        padding: 2px 16px;
+        background-color: #ffffff;
+    }
+
+    .modal-footer {
+        padding: 2px 16px;
+        background-color: #ffffff;
+        color: black;
+        border-top: none;
+        text-align: center;
+    }
+
+    .modal-footer hr {
+        margin-top: 20vh;
+    }
+
+    .modal-footer>p {
+        color: #000000
+    }
+
+    .modal-footer h3 {
+        text-transform: none;
+        font-size: 4vh;
+
+    }
+
+    .close {
+        color: #000000;
+        float: left;
+        font-size: 5em;
+        font-weight: bold;
+        opacity: 1;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #008abf;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    @-webkit-keyframes zoomIn {
+        from {
+            opacity: 0;
+            -webkit-transform: scale3d(.3, .3, .3);
+            transform: scale3d(.3, .3, .3);
+        }
+
+        50% {
+            opacity: 1;
+        }
+    }
+
+    .zoomIn {
+        -webkit-animation-name: zoomIn;
+        animation-name: zoomIn;
+    }
+
+    .animated {
+        -webkit-animation-duration: .3s;
+        animation-duration: .3s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+
+
+    /*Navigation Inner Styling*/
+
+    .nav {
+        overflow: hidden;
+    }
+
+    .nav ul li a {
+        text-decoration: none;
+        overflow: hidden;
+    }
+
+    .nav ul li a.four {
+        color: #4e8164;
+    }
+
+    .nav ul li a.three {
+        color: #338383;
+    }
+
+    .nav ul li a.two {
+        color: #2788a4;
+    }
+
+    .nav ul li a.one {
+        color: #008abf;
+    }
+
+
+    /*Mobile Optimization*/
+    /* Portrait Tablet to Landscape and Desktop */
+    @media (min-width:768px) and (max-width:979px) {
+
+        .nav ul li {
+            display: block;
+            height: 45px;
+            padding: 5vh;
+
+        }
+
+        .nav ul {
+            clear: both;
+            width: 100%;
+            text-align: center;
+            padding: 0;
+        }
+
+        .nav ul li a {
+            padding: 0;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 6vw;
+            letter-spacing: -0.05em;
+        }
+    }
+
+    /* Landscape-Phone to Portrait Tablet*/
+    @media (max-width:767px) {
+
+        .nav ul li {
+            display: block;
+            height: 38px;
+            padding: 5vh;
+
+        }
+
+        .nav ul {
+            clear: both;
+            width: 100%;
+            text-align: center;
+            padding: 0;
+        }
+
+        .nav ul li a {
+            padding: 0;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 6vw;
+            letter-spacing: -0.05em;
+        }
+    }
+
+    /*Landscape-Phone Downwards*/
+    @media (max-width: 480px) {
+
+        .nav ul li {
+            display: block;
+            height: 38px;
+            padding: 5vh;
+        }
+
+        .nav ul {
+            clear: both;
+            width: 100%;
+            text-align: center;
+            padding: 0;
+        }
+
+        .nav ul li a {
+            padding: 0;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 10vw;
+            letter-spacing: -0.05em;
+        }
+    }
+
+
+}

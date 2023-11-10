@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="ScreenOrientation" content="autoRotate:disabled">
+    <title>Finger Lakes Financial Group</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='media/icon.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mobile/login_mobile.css') }}">
+
+    <script src=" https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
+        </script>
+</head>
+
+<h1 class="title">LOGIN</h1>
+
+
+<div class="navigation">
+    <button id="sized" class="menu">
+        <span></span>
+    </button>
+    <div id="myModal" class="modalx">
+        <!-- Modal content -->
+        <div class="modal-content animated           zoomIn">
+
+            <div class="modal-header">
+                <span class="close">×</span>
+            </div>
+            <div class="modal-body nav">
+                <ul>
+                    <li><a class="one" href="/">HOME</a></li>
+                    <li><a class="two" href="/services00">SERVICES</a></li>
+                    <li><a class="three" href="/advisors00">ADVISORS</a></li>
+                    <li><a class="four" href="/disclosures00">DISCLOSURES</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<ul class="image-list">
+    <li class="image-list-item">
+        <a href="https://www.prudential.com/login" target="_blank"><img
+                src="/static/media/login_items/prudential_login.png" alt="Prudential"></a>
+    </li>
+    <li class="image-list-item">
+        <a href="https://wealth.emaplan.com/ema/SignIn?ema" target="_blank"><img
+                src="/static/media/login_items/emoney_login.png" alt="Emoney"></a>
+    </li>
+    <li class="image-list-item">
+        <a href="https://www.mystreetscape.com/auth/access/login" target="_blank"><img
+                src="/static/media/login_items/wealthscape_login.png" alt="Wealthscape"></a>
+    </li>
+</ul>
+
+
+<script>
+    // Get Modal
+    var modal = document.getElementById('myModal');
+
+    // Get pseudoelement to open Modal
+    var btn = document.getElementById("sized");
+
+    // Get the <span> element to close Modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When user clicks button, open Modal
+    btn.onclick = function () {
+        modal.style.display = "block";
+    };
+
+    // When user clicks Close (x), close Modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    };
+
+    // When user clicks anywhere outside of the Modal, close Modal
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+</script>
+
+</html>

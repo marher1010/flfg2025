@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="ScreenOrientation" content="autoRotate:disabled">
+    <title>Advisors</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='media/icon.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mobile/advisors_mobile.css') }}">
+
+    <script src=" https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
+        </script>
+</head>
+
+<body>
+
+    <h1 class="title">ADVISORS</h1>
+    <div class="navigation">
+        <button id="sized" class="menu">
+            <span></span>
+        </button>
+        <div id="myModal" class="modalx">
+            <!-- Modal content -->
+            <div class="modal-content animated           zoomIn">
+
+                <div class="modal-header">
+                    <span class="close">×</span>
+                </div>
+                <div class="modal-body nav">
+                    <ul>
+                        <li><a class="one" href="/">HOME</a></li>
+                        <li><a class="two" href="/services00">SERVICES</a></li>
+                        <li><a class="three" href="/login00">LOGIN</a></li>
+                        <li><a class="four" href="/disclosures00">DISCLOSURES</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-container">
+
+        <div class="panel-container">
+            <div class="panel">
+                <div><img src="/static/media/portraits/p1.png" alt="" /></div>
+                <h3 class="name">Paul Sypher</h3>
+                <p class="position">CFP®, CLU®, ChFC®</p>
+                <p class="position">Financial Planner</p>
+                <p class="location">Cortland, NY</p>
+
+                <p class="background">
+                    In the industry since 1988 // Founded Finger Lakes Financial Group in
+                    2000
+                </p>
+                <div class="socials">
+                    <a href="https://www.linkedin.com/in/paulsypher" target="_blank"><img
+                            src="/static/media/linkedin.png" alt="LinkedIn"></a>
+                    <a href="tel:+16077589930" target="_blank"><img src="/static/media/phone.png" alt="Phone"></a>
+                    <a href="mailto:paul.sypher@prudential.com" target="_blank"><img src="/static/media/email.png"
+                            alt="Email"></a>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div><img src="/static/media/portraits/n1.png" alt="" /></div>
+                <h3 class="name">Nathan Melfi</h3>
+                <p class="position"><br></p>
+                <p class="position">Financial Advisor</p>
+                <p class="location">Cortland, NY</p>
+
+                <p class="background">
+                    Recent graduate of Le Moyne College // New to the team of advisors</p>
+                <div class="socials" style="margin-top:3.5vh;">
+                    <a href="#" target="_blank"><img src="/static/media/linkedin.png" alt="LinkedIn"></a>
+                    <a href="tel:+16073043587" target="_blank"><img src="/static/media/phone.png" alt="Phone"></a>
+                    <a href="mailto:nathan.melfi@prudential.com" target="_blank"><img src="/static/media/email.png"
+                            alt="Email"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-container">
+            <div class="panel">
+                <div>
+                    <img src="/static/media/portraits/r1.png" alt="" />
+                </div>
+                <h3 class="name">Raymond O'Bannion</h3>
+                <p class="position">CFP®, CLU®, ChFC®</p>
+                <p class="position">Financial Planner</p>
+                <p class="location">Ithaca, NY</p>
+
+                <p class="background">
+                    In the industry since 2012 // Joined Finger Lakes Financial Group in 2015
+                </p>
+                <div class="socials">
+                    <a href="#" target="_blank"><img src="/static/media/linkedin.png" alt="LinkedIn"></a>
+                    <a href="tel:+16073796058" target="_blank"><img src="/static/media/phone.png" alt="Phone"></a>
+                    <a href="mailto:raymond.obannion@prudential.com" target="_blank"><img src="/static/media/email.png"
+                            alt="Email"></a>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div><img src="/static/media/portraits/c1.png" alt="" /></div>
+                <h3 class="name">Christopher Saunders</h3>
+                <p class="position">RICP®</p>
+                <p class="position">Financial Planner</p>
+                <p class="location">Horseheads, NY</p>
+
+                <p class="background">
+                    In the industry since 2012 // Joined Finger Lakes Financial Group in
+                    2012
+                </p>
+                <div class="socials">
+                    <a href="https://www.linkedin.com/in/christopher-saunders-b37087105" target="_blank"><img
+                            src="/static/media/linkedin.png" alt="LinkedIn"></a>
+                    <a href="tel:+16077676220" target="_blank"><img src="/static/media/phone.png" alt="Phone"></a>
+                    <a href="mailto:christopher.saunders@prudential.com" target="_blank"><img
+                            src="/static/media/email.png" alt="Email"></a>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+
+    <div class="bottom-footer"></div>
+
+    <script>
+        // Get Modal
+        var modal = document.getElementById('myModal');
+
+        // Get pseudoelement to open Modal
+        var btn = document.getElementById("sized");
+
+        // Get the <span> element to close Modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When user clicks button, open Modal
+        btn.onclick = function () {
+            modal.style.display = "block";
+        };
+
+        // When user clicks Close (x), close Modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        };
+
+        // When user clicks anywhere outside of the Modal, close Modal
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+    </script>
+</body>
+
+
+
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="ScreenOrientation" content="autoRotate:disabled">
+    <meta name=”Description” content="We are a financial services team specializing in retirement, investment, and estate-planning
+    strategies.">
+    <title>Finger Lakes Financial Group</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='media/icon.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/desktop/main_desktop.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mobile/main_mobile.css') }}">
+
+    <script src=" https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
+        </script>
+</head>
+
+
+
+<body>
+
+    <header>
+
+        <!-- MOBILE ONLY  -->
+
+
+        <div class="banner"></div>
+
+        <div class="logo"><img class="logo_img" src="/static/media/icon_black.png" alt="Logo"></div>
+        <div class="logo_text"><img class="logo_text_img" src="/static/media/logo_text.png" alt="Logo_text"></div>
+
+        <div class="navigation">
+            <button id="sized" class="menu">
+                <span></span>
+            </button>
+            <div id="myModal" class="modalx">
+                <!-- Modal content -->
+                <div class="modal-content animated           zoomIn">
+
+                    <div class="modal-header">
+                        <span class="close">×</span>
+                    </div>
+                    <div class="modal-body nav">
+                        <ul>
+                            <li><a class="one" href="/services00">SERVICES</a></li>
+                            <li><a class="two" href="/advisors00">ADVISORS</a></li>
+                            <li><a class="three" href="/login00">LOGIN</a></li>
+                            <li><a class="four" href="/disclosures00">DISCLOSURES</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- << LANDING PAGE >> -->
+        <!-- 2-triangle overlay, carousel, right footer logo, left footer about -->
+        <!-- Elements in "left" and "right" are identical; seamless blend between 2-triangle overlay-->
+        <div class="overlay-container">
+
+            <div class="overlay right">
+
+                <!-- Carousel -->
+                <div class="carousel">
+                    <div class="before">Helping you</div>
+                    <div class="out">
+                        <div class="in">
+                            <div class="focus_word">invest</div>
+                            <div class="focus_word">retire</div>
+                            <div class="focus_word short">save</div>
+                            <div class="focus_word short">plan</div>
+                            <div class="focus_word">invest</div>
+                            <div class="focus_word">retire</div>
+                            <div class="focus_word short">save</div>
+                            <div class="focus_word short">plan</div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="after">confidently since 2000.</div>
+                </div>
+                <!-- Left Footer About -->
+                <div class="footer left">
+                    <h4><a id="about-one" class="about-button"><strong>CONTACT</strong></a> · <a id="about-two"
+                            class="about-button"><strong>LOGIN</strong></a>
+                        · <a id="about-three" class="about-button"><strong>DISCLOSURES</strong></a></h4>
+                    <p>We are a financial services team specializing in retirement, investment, and estate-planning
+                        strategies.</p>
+                </div>
+                <!-- Right Footer Logo -->
+                <div class="footer right">
+                    <img src="/static/media/logo_black.png" alt="Logo">
+                </div>
+            </div>
+
+            <div class="overlay left">
+
+
+                <!-- Carousel -->
+                <div class="carousel">
+                    <div class="before">Helping you</div>
+                    <div class="out">
+                        <div class="in">
+                            <div class="focus_word">invest</div>
+                            <div class="focus_word">retire</div>
+                            <div class="focus_word short">save</div>
+                            <div class="focus_word short">plan</div>
+                            <div class="focus_word">invest</div>
+                            <div class="focus_word">retire</div>
+                            <div class="focus_word short">save</div>
+                            <div class="focus_word short">plan</div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="after">confidently since 2000.</div>
+                </div>
+                <!-- Left Footer About -->
+                <div class="footer left">
+                    <h4><a id="about-one" class="about-button">CONTACT</a> · <a id="about-two"
+                            class="about-button">LOGIN</a>
+                        · <a id="about-three" class="about-button">DISCLOSURES</a></h4>
+                    <p>We are a financial services team specializing in retirement, investment, and estate-planning
+                        strategies.</p>
+                </div>
+                <!-- Right Footer Logo -->
+                <div class="footer right">
+                    <img src="/static/media/logo_black.png" alt="Logo">
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Modals -->
+        <div class="modals">
+            <!-- Modal 1 -->
+            <div id="modal-container" modal-id="about-one">
+
+                <div class="modal-background">
+                    <div class="modal">
+                        <ul>
+                            <li>
+                                <strong>Paul Sypher</strong>
+                                <ul>
+                                    <li><a href="tel:+16077589930" target="_blank">(607) 758-9930</a></li>
+                                    <li><a href="mailto:paul.sypher@prudential.com">paul.sypher@prudential.com</a></li>
+                                </ul>
+                            </li>
+                            <br>
+                            <li>
+                                <strong>Raymond O'Bannion</strong>
+                                <ul>
+                                    <li><a href="tel:+16073796058" target="_blank">(607) 379-6058</a></li>
+                                    <li><a href="mailto:raymond.obannion@prudential.com">ray.obannion@prudential.com</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <br>
+                            <li>
+                                <strong>Christopher Saunders</strong>
+                                <ul>
+                                    <li><a href="tel:+16077676220" target="_blank">(607) 767-6220</a></li>
+                                    <li><a
+                                            href="mailto:christopher.saunders@prudential.com">christopher.saunders@prudential.com</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <br>
+                            <li>
+                                <strong>Nathan Melfi</strong>
+                                <ul>
+                                    <li><a href="tel:+16073043587" target="_blank">(607) 304-3587</a></li>
+                                    <li><a href="mailto:nathan.melfi@prudential.com">nathan.melfi@prudential.com</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Modal 2 -->
+            <div id="modal-container" modal-id="about-two">
+
+                <div class="modal-background">
+                    <div class="modal">
+                        <ul class="image-list">
+                            <li class="image-list-item">
+                                <a href="https://www.prudential.com/login" target="_blank"><img
+                                        src="/static/media/login_items/prudential_login.png" alt="Prudential"></a>
+                            </li>
+                            <li class="image-list-item">
+                                <a href="https://wealth.emaplan.com/ema/SignIn?ema" target="_blank"><img
+                                        src="/static/media/login_items/emoney_login.png" alt="Emoney"></a>
+                            </li>
+                            <li class="image-list-item">
+                                <a href="https://www.mystreetscape.com/auth/access/login" target="_blank"><img
+                                        src="/static/media/login_items/wealthscape_login.png" alt="Wealthscape"></a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Modal 3 -->
+            <div id="modal-container" modal-id="about-three">
+
+                <div class="modal-background">
+                    <div class="modal">
+                        <p>
+                            Paul Sypher, Raymond O'Bannion, and Christopher Saunders offer financial planning and
+                            investment
+                            advisory services and programs through Pruco Securities, LLC (Pruco), under the marketing
+                            name
+                            Prudential Financial Planning Services (PFPS), pursuant to a separate client agreement.
+                            Offering
+                            insurance and securities products and services as a registered representative of Pruco and
+                            an
+                            agent of issuing insurance companies. 1-800-778-2255. Finger Lakes Financial Group and its
+                            representatives do not render tax or legal advice. Please consult with your own advisors
+                            regarding your particular situation.
+                            <br>Nathan Melfi offers investment advisory services and programs through Pruco Securities,
+                            LLC
+                            (Pruco), under the marketing name Prudential Financial Planning Services (PFPS), pursuant to
+                            a
+                            separate client agreement. Offering insurance and securities products and services as a
+                            registered representative of Pruco and an agent of issuing insurance companies.
+                            <br><br>Licenses and State Registrations:
+                            <br>Securities: AZ, CA, CO, CT, DC, FL, GA, HI, MA, MI, NC, NV, NY, OH, PA, RI, SC, TN, TX,
+                            VA,
+                            WA
+                            <br>Life Insurance: FL, GA, MA, MI, NC, NJ, NY, PA, TN, TX, VA, WY
+                            <br>Variable Life Insurance: FL, GA, MA, MI, NC, NY, PA, TN, TX, VA
+                            <br>Mutual Funds: AZ, CA, CO, CT, DC, FL, GA, HI, MA, MI, NC, NV, NY, OH, PA, RI, SC, TN,
+                            TX,
+                            VA, WA
+                            <br>Fixed Annuities: FL, GA, MA, MI, NC, NY, PA, TN, TX, VA
+                            <br>Variable Annuities: FL, GA, MA, MI, NC, NY, PA, TN, TX, VA
+                            <br><br>eMoney is intended for informational purposes only and is not intended to replace
+                            official account statements from the sponsor or custodian. As always, you should refer to
+                            your
+                            official account statements to compile a complete and accurate inventory of your accounts.
+                            You
+                            are also strongly encouraged to review your official account statements and compare them
+                            against
+                            the values and other information contained on your eMoney website. In the case of any
+                            discrepancy, you should rely on your official account statements as the most accurate source
+                            of
+                            information. Questions regarding any account listed should be directed to the customer
+                            contact
+                            information identified on the official account statement. Assets may not be covered by SIPC.
+                            <br><br>Control Number: 1067792-00002-00
+                        </p>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- "DISCOVER" Button -->
+        <!-- Opens the 2-triangle overlay, navigating from the landing page to the video page -->
+        <div id="forward" class="discover-button"></div>
+
+
+        <!-- VIDEO PAGE -->
+        <!-- This video is the background; it plays when the "DISCOVER" button is clicked -->
+        <video loop muted plays-inline webkit-playsinline class="background-video">
+            <source src="/static/media/background-video.mp4">
+        </video>
+
+        <!-- Navigation Menu -->
+        <!-- Back button pauses video and closes 2-triangle overlay -->
+        <div class="navigation-menu">
+            <a class="nav one" id="services" href="/services0">SERVICES</a>
+            <a class="nav two" id="back">BACK</a>
+            <a class="nav three" id="advisors" href="/advisors0">ADVISORS</a>
+        </div>
+
+
+
+    </header>
+
+    <script src="/static/js/desktop/main_desktop.js"></script>
+    <script>
+        // Get Modal
+        var modal = document.getElementById('myModal');
+
+        // Get pseudoelement to open Modal
+        var btn = document.getElementById("sized");
+
+        // Get the <span> element to close Modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When user clicks button, open Modal
+        btn.onclick = function () {
+            modal.style.display = "block";
+        };
+
+        // When user clicks Close (x), close Modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        };
+
+        // When user clicks anywhere outside of the Modal, close Modal
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+    </script>
+</body>
+
+
+
+
+
+
+</html>

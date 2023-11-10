@@ -1,0 +1,506 @@
+@import url('https://fonts.cdnfonts.com/css/verdana');
+
+
+@media (min-width: 768px) {
+
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Verdana', sans-serif;
+        user-select: none;
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+        pointer-events: auto;
+    }
+
+    body {
+        overflow: hidden;
+    }
+
+    header {
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        overflow: hidden;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    /* << LANDING PAGE >> */
+
+    /* Overlay */
+
+    .logo {
+        display: none;
+    }
+
+
+    .logo_text {
+        display: none;
+    }
+
+    header .overlay {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        z-index: 1;
+        background: linear-gradient(to top, #4e8164 0%, #008abf 100%);
+        justify-content: center;
+        align-items: center;
+        transition: all 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+    }
+
+    header .overlay.left {
+        clip-path: polygon(0 0, 0% 100%, 100% 100%);
+    }
+
+    header .overlay.right {
+        clip-path: polygon(100% 0, 0 0, 100% 100%);
+    }
+
+    /* Opening of the 2-triangle overlay */
+    header.open .overlay.left {
+        clip-path: polygon(0 0, 0 100%, 0 100%);
+    }
+
+    header.open .overlay.right {
+        clip-path: polygon(100% 0, 100% 0, 100% 100%);
+    }
+
+    header .overlay .footer {
+        position: fixed;
+        width: 25vw;
+        height: auto;
+        bottom: 2.5vh;
+
+    }
+
+    header .overlay .footer.left {
+        left: 1.5vw;
+        line-height: 1.25rem;
+        pointer-events: all;
+        text-align: left;
+        max-width: 100%;
+    }
+
+    header .overlay .footer.left h4 {
+        overflow-x: wrap;
+        text-align: left;
+        font-weight: 550;
+        padding-bottom: 0.8rem;
+        word-spacing: auto;
+    }
+
+    header .overlay .footer.left p {
+        max-width: 100%;
+    }
+
+    header .overlay .footer.right {
+        right: -1vw;
+    }
+
+    header .overlay .footer.right img {
+        width: 100%;
+        height: auto;
+        max-width: 22vw;
+        max-height: 13vh;
+        pointer-events: none;
+
+    }
+
+    /* Carousel */
+
+    .carousel {
+        position: absolute;
+        width: 100%;
+        height: 12vw;
+        top: 45%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+        text-align: center;
+        font-size: 4vw;
+        line-height: 6vw;
+        font-weight: 500;
+    }
+
+    .carousel .before {
+        position: absolute;
+        top: 0;
+        right: 45.7%;
+        height: 6vw;
+
+
+    }
+
+    .carousel .out {
+        position: absolute;
+        top: 0;
+        left: 55.2%;
+        text-align: left;
+        height: 6vw;
+        overflow: hidden;
+
+
+    }
+
+    .carousel .out .focus_word {
+        display: block;
+        font-weight: 600;
+
+
+    }
+
+    .carousel .out .in {
+        position: relative;
+        animation: rotate 15s ease-in-out infinite;
+
+
+    }
+
+
+
+
+    /* Modals */
+
+
+
+    #modal-container {
+        position: fixed;
+        display: table;
+        height: 100vh;
+        width: 100vw;
+        transform: scale(0);
+        z-index: 3;
+    }
+
+    #modal-container.about-one {
+        transform: scaleY(0.01) scaleX(0);
+        animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+        pointer-events: auto;
+
+    }
+
+    #modal-container.about-one a {
+
+        z-index: 10000;
+        pointer-events: auto;
+    }
+
+    #modal-container.about-one .modal-background .modal {
+        transform: scale(0);
+        animation: zoomIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+
+    #modal-container.about-one.out {
+        transform: scale(1);
+        animation: unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+
+    #modal-container.about-one.out .modal-background .modal {
+        animation: zoomOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+
+    /*  */
+
+
+    #modal-container.about-two {
+        transform: scaleY(0.01) scaleX(0);
+        animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+
+    #modal-container.about-two .modal-background .modal {
+        transform: scale(0);
+        animation: zoomIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+
+    #modal-container.about-two.out {
+        transform: scale(1);
+        animation: unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+
+    #modal-container.about-two.out .modal-background .modal {
+        animation: zoomOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+
+    /*  */
+
+
+    #modal-container.about-three {
+        transform: scaleY(0.01) scaleX(0);
+        animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+
+    #modal-container.about-three .modal-background .modal {
+        transform: scale(0);
+        animation: zoomIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+
+    #modal-container.about-three.out {
+        transform: scale(1);
+        animation: unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+
+    #modal-container.about-three.out .modal-background .modal {
+        animation: zoomOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+
+
+    /*  */
+
+    #modal-container .modal-background {
+        z-index: 4;
+        display: table-cell;
+        background: rgba(0, 0, 0, 0.2);
+        text-align: center;
+        vertical-align: middle;
+    }
+
+
+
+    #modal-container .modal-background .modal {
+        background-color: rgb(255, 255, 255, .9);
+        padding: 50px;
+        display: inline-block;
+        font-weight: 300;
+        position: relative;
+        /* pointer-events: all; */
+        max-width: 80vw;
+        max-height: 90vh;
+    }
+
+
+
+    #modal-container .modal-background .modal h2 {
+        font-size: 25px;
+        line-height: 25px;
+        margin-bottom: 15px;
+        z-index: 100;
+
+
+    }
+
+    #modal-container .modal-background .modal p {
+        font-size: 18px;
+        line-height: 22px;
+        z-index: 100;
+        text-align: left;
+    }
+
+
+    .image-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .image-list-item {
+        margin-bottom: 20px;
+        background: white;
+    }
+
+    .image-list-item img {
+        width: 300px;
+        height: 100px;
+        border: 2px solid #000;
+        padding: 5%;
+    }
+
+    /* Modal-Opening About Buttons */
+
+    .about-button {
+        display: inline-block;
+        font-size: 1.125rem;
+        cursor: pointer;
+    }
+
+    .about-button:hover {
+        color: rgb(255, 255, 255, .75);
+        transition: all 0.3s ease-in-out
+    }
+
+    /* "DISCOVER" Button */
+    header .discover-button {
+        position: absolute;
+        z-index: 2;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 1px solid #000;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+
+    header .discover-button::before {
+        content: "DISCOVER";
+        display: block;
+        text-align: center;
+    }
+
+    header .discover-button.hidden {
+        display: none;
+    }
+
+    header .discover-button:hover {
+        transform: translate(-50%, -50%) scale(1.1);
+        transition: all 0.3s ease-in-out;
+
+    }
+
+
+
+
+    /* Animations */
+    @keyframes rotate {
+
+        0%,
+        20% {
+            transform: translateY(0);
+        }
+
+        25%,
+        45% {
+            transform: translateY(-6vw);
+        }
+
+        50%,
+        70% {
+            transform: translateY(-12vw);
+        }
+
+        75%,
+        95% {
+            transform: translateY(-18vw);
+        }
+
+        100% {
+            transform: translateY(-24vw);
+        }
+    }
+
+    @keyframes unfoldIn {
+        0% {
+            transform: scaleY(0.5) scaleX(0);
+        }
+
+        50% {
+            transform: scaleY(0.5) scaleX(1);
+        }
+
+        100% {
+            transform: scaleY(1) scaleX(1);
+        }
+    }
+
+    @keyframes unfoldOut {
+        0% {
+            transform: scaleY(1) scaleX(1);
+        }
+
+        50% {
+            transform: scaleY(0.5) scaleX(1);
+        }
+
+        100% {
+            transform: scaleY(0.5) scaleX(0);
+        }
+    }
+
+    @keyframes zoomIn {
+        0% {
+            transform: scale(0);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    @keyframes zoomOut {
+        0% {
+            transform: scale(1);
+        }
+
+        100% {
+            transform: scale(0);
+        }
+    }
+
+
+    /* << VIDEO PAGE >> */
+
+    header .background-video {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        z-index: -2;
+        bottom: 0;
+        right: 0;
+        object-fit: cover;
+    }
+
+    /* Navigation Menu */
+
+
+    .navigation-menu {
+        position: absolute;
+        width: 40%;
+        height: 7.5%;
+        z-index: -1;
+        display: flex;
+        flex-direction: row;
+        bottom: 2.5vh;
+        left: 30%;
+        box-shadow: 0 0 1.5vw rgba(0, 0, 0, 0.1);
+        background: rgb(255, 255, 255, .5);
+        font-family: 'Verdana', sans-serif;
+
+    }
+
+    .nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        color: #000;
+        letter-spacing: 0.1rem;
+        font-size: 0.8rem;
+    }
+
+    .nav.one:hover,
+    .nav.two:hover,
+    .nav.three:hover {
+        color: white;
+        padding-left: 2.5vw;
+        padding-right: 2.5vw;
+        transition: all 0.5s ease-in-out;
+
+    }
+
+    .nav.one:hover {
+        background: linear-gradient(to right, #4e8164 0%, #338383 100%);
+    }
+
+    .nav.two:hover {
+        background: linear-gradient(to right, #338383 0%, #2788a4 100%);
+    }
+
+    .nav.three:hover {
+        background: linear-gradient(to right, #2788a4 0%, #008abf 100%);
+    }
+
+    .navigation {
+        display: none;
+    }
+
+
+
+}
