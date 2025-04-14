@@ -29,7 +29,7 @@
         left: 1vh;
         top: 1vh;
         bottom: 1vh;
-        overflow-y: hidden;
+        overflow-y: scroll;
         align-items: center;
         display: flex;
         flex-direction: column;
@@ -50,7 +50,7 @@
 
     .panel {
         width: 18.5vw;
-        height: 45vh;
+        height: auto;
         text-align: center;
         margin: 1.5%;
         background: rgba(255, 255, 255);

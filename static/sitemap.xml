@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <!-- Homepage -->
+    <url>
+        <loc>https://fingerlakesfinancialgroup.com</loc>
+        <lastmod>2023-11-30</lastmod>
+    </url>
+
+    <!-- Services Desktop-->
+    <url>
+        <loc>https://fingerlakesfinancialgroup.com/services0</loc>
+        <lastmod>2023-11-30</lastmod>
+    </url>
+
+    <!-- Advisors Desktop-->
+    <url>
+        <loc>https://fingerlakesfinancialgroup.com/advisors0</loc>
+        <lastmod>2023-11-30</lastmod>
+    </url>
+
+    <!-- Services Mobile-->
+    <url>
+        <loc>https://fingerlakesfinancialgroup.com/services00</loc>
+        <lastmod>2023-11-30</lastmod>
+    </url>
+
+    <!-- Advisors Mobile-->
+    <url>
+        <loc>https://fingerlakesfinancialgroup.com/advisors00</loc>
+        <lastmod>2023-11-30</lastmod>
+    </url>
+
+    <!-- Login Mobile-->
+    <url>
+        <loc>https://fingerlakesfinancialgroup.com/login00</loc>
+        <lastmod>2023-11-30</lastmod>
+    </url>
+
+    <!-- Disclosures Mobile-->
+    <url>
+        <loc>https://fingerlakesfinancialgroup.com/disclosures00</loc>
+        <lastmod>2023-11-30</lastmod>
+    </url>
+
+</urlset>

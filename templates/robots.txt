@@ -1,0 +1,23 @@
+User-agent: *
+Disallow: /fingerlakesdbasign-original-copy/
+Disallow: /retirement-planning-image-1/
+Disallow: /hillary-updated-opt/
+Disallow: /lime-spinner-rotate/
+Disallow: /counter-03/
+Disallow: /medicare-supplement-image-1/
+Disallow: /our-services-image-5/
+Disallow: /retirement-planning-image-1-3/
+Disallow: /home-slider-bg-btm/
+Disallow: /paul-image/
+Disallow: /3-signs-hes-cheating-for-you/
+Disallow: /understanding-annuities-brochure-isg_br_ann200_0/
+Disallow: /counter-05/
+Disallow: /how-we-work-banner/
+Disallow: /home-hero-slider-5/
+Disallow: /retirement-planning-image-1-2/
+Disallow: /understanding-annuities-brochure/understanding-annuities-brochure-isg_br_ann200_01_final-1/
+Disallow: /flingster-review-a-what-exactly-do-we-know-about-it/
+Disallow: /what-every-consumer-should-know-about-life-insurance-ed-12-2022-image/
+Disallow: /contact-us/
+Disallow: /home-service-img-shape-odd/
+
