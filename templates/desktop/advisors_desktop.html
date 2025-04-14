@@ -7,6 +7,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=0">
     <link rel="shortcut icon" href="{{ url_for('static', filename='media/icon.png') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/desktop/advisors_desktop.css') }}">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            height: 100vh;
+            position: relative;
+        }
+        
+        .map-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        
+        .card-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            max-height: 80vh;
+            width: auto;
+            max-width: 42vw;
+            overflow-y: auto;
+            padding: 20px;
+            z-index: 2;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+        }
+        
+        .et-hero-tabs-container {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .et-hero-tab {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .et-hero-tab:hover {
+            background: linear-gradient(to right, #338383 0%, #2788a4 100%);
+            color: white;
+        }
+        
+        #modal-container {
+            position: fixed;
+            display: table;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            transform: scale(0);
+            z-index: 10;
+        }
+        
+        #modal-container.six {
+            transform: scale(1);
+        }
+        
+        #modal-container .modal-background {
+            display: table-cell;
+            background: rgba(0, 0, 0, 0.8);
+            text-align: center;
+            vertical-align: middle;
+        }
+        
+        #modal-container .modal-background .modal {
+            background-color: #fff;
+            padding: 50px;
+            display: inline-block;
+            border-radius: 3px;
+            font-weight: 300;
+            position: relative;
+            max-width: 700px;
+            max-height: 85vh;
+            overflow-y: auto;
+        }
+        
+        .text {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 
 </head>
 
@@ -30,8 +130,11 @@
 <div class="text">
 
     <body>
+        <div class="map-container">
+            <iframe src="https://snazzymaps.com/embed/522748" width="100%" height="100%" style="border:none;"></iframe>
+        </div>
+        
         <div class="card-container">
-
             <div class="panel-container">
                 <div class="panel">
                     <div><img src="/static/media/portraits/p1.png" alt="" /></div>
@@ -137,19 +240,90 @@
                 </div>
           </div>
 
-
+          <div style="text-align: center; margin-top: 20px;">
+              <p><b>Check the background of investment professionals associated with this site on FINRA'S
+                  <a href="https://brokercheck.finra.org" style="color: blue;">BrokerCheck</a>.</b>
+              </p>
+          </div>
 
         </div>
 
         <div class="et-hero-tabs-container">
-            <a href="/#open" class="et-hero-tab pussy" id="back" style="text-decoration: none;">BACK</a>
+            <a href="/#open" class="et-hero-tab" id="back">BACK</a>
+            <a href="#" class="et-hero-tab" id="disclosures">DISCLOSURES</a>
         </div>
+        
+        <!-- Disclosures Modal -->
+        <div id="modal-container" modal-id="disclosures">
+            <div class="modal-background">
+                <div class="modal">
+                    <p>
+                       <b>Paul Sypher, Raymond O'Bannion, Christopher Saunders, Nathan Melfi, and John Ward
+                        are financial planners with, and  offers securities and investment advisory
+                        services through, LPL Enterprise (LPLE), a Registered Investment Advisor, member
+                        <a href="https://www.finra.org" target="_blank" style="color: blue;">FINRA</a>/<a href="https://www.sipc.org" target="_blank" style="color: blue;">SIPC</a>, and an affiliate of LPL Financial.</b>
+                        
+                        <br><br>Financial professionals are licensed insurance agents of Prudential. These 
+                        financial professionals are permitted to brand under 'Prudential.' LPLE
+                        and LPL Financial are not affiliated with Finger Lakes Financial Group or
+                        Prudential. 
+                        <br><br>Licenses and State Registrations:
+                        <br>Securities: AZ, CA, CO, CT, DC, FL, GA, HI, MA, MI, NC, NV, NY, OH, PA, RI, SC, TN, TX,
+                        VA,
+                        WA
+                        <br>Life Insurance: FL, GA, MA, MI, NC, NJ, NY, PA, TN, TX, VA, WY
+                        <br>Variable Life Insurance: FL, GA, MA, MI, NC, NY, PA, TN, TX, VA
+                        <br>Mutual Funds: AZ, CA, CO, CT, DC, FL, GA, HI, MA, MI, NC, NV, NY, OH, PA, RI, SC, TN,
+                        TX,
+                        VA, WA
+                        <br>Fixed Annuities: FL, GA, MA, MI, NC, NY, PA, TN, TX, VA
+                        <br>Variable Annuities: FL, GA, MA, MI, NC, NY, PA, TN, TX, VA
 
-        <div class="map-container">
-            <iframe src="https://snazzymaps.com/embed/522748" width="100%" height="100%" style="border:none;"></iframe>
+                        <br><br>The LPL Enterprise registered representative(s) associated with this website may discuss and/or transact business only
+                        with residents of the states in which they are properly registered or licensed. No offers may be made or accepted from any 
+                        resident of any other state. 
+
+                        <br><br>eMoney is intended for informational purposes only and is not intended to replace
+                        official account statements from the sponsor or custodian. As always, you should refer to
+                        your
+                        official account statements to compile a complete and accurate inventory of your accounts.
+                        You
+                        are also strongly encouraged to review your official account statements and compare them
+                        against
+                        the values and other information contained on your eMoney website. In the case of any
+                        discrepancy, you should rely on your official account statements as the most accurate source
+                        of
+                        information. Questions regarding any account listed should be directed to the customer
+                        contact
+                        information identified on the official account statement. Assets may not be covered by SIPC.
+                        
+                        <br><br>Asset allocation does not ensure a profit or protect against a loss.                
+                        <br><br><a href="https://www.lpl.com/lpl-enterprise.html" target="_blank" style="color: blue;">LPL Enterprise Form CRS</a> 
+                    </p>
+                </div>
+            </div>
         </div>
+        
         <script src="/static/js/desktop/advisors_desktop.js"></script>
-
+        <script>
+            // Modal functionality
+            const openEls = document.querySelectorAll("#disclosures");
+            const modalEls = document.querySelectorAll('#modal-container[modal-id="disclosures"]');
+            
+            openEls.forEach(el => {
+                el.addEventListener('click', function() {
+                    const modalId = this.id;
+                    const modalElem = document.querySelector(`#modal-container[modal-id="${modalId}"]`);
+                    modalElem.classList.add('six');
+                });
+            });
+            
+            modalEls.forEach(el => {
+                el.addEventListener('click', function() {
+                    this.classList.remove('six');
+                });
+            });
+        </script>
     </body>
 
 </div>
