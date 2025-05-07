@@ -29,7 +29,7 @@
             position: absolute;
             top: 20px;
             left: 20px;
-            max-height: 80vh;
+            max-height: 85vh;
             width: auto;
             max-width: 42vw;
             overflow-y: auto;
@@ -106,6 +106,26 @@
             width: 100%;
             height: 100%;
         }
+
+        #back-button-top-right {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+            z-index: 100; /* High z-index to be on top */
+            transition: all 0.3s ease;
+        }
+
+        #back-button-top-right:hover {
+            background: linear-gradient(to right, #338383 0%, #2788a4 100%);
+            color: white;
+        }
     </style>
 
 </head>
@@ -130,6 +150,7 @@
 <div class="text">
 
     <body>
+        <a href="/#open" class="et-hero-tab" id="back-button-top-right">BACK</a>
         <div class="map-container">
             <iframe src="https://snazzymaps.com/embed/522748" width="100%" height="100%" style="border:none;"></iframe>
         </div>
@@ -168,7 +189,7 @@
                     <p class="background">
                         Recent graduate of Le Moyne College // New to the team of advisors</p>
                     <div class="socials">
-                        <a href="#" target="_blank"><img src="/static/media/linkedin.png" alt="LinkedIn"></a>
+                        <a href="https://www.linkedin.com/in/nathan-melfi-b61443195" target="_blank"><img src="/static/media/linkedin.png" alt="LinkedIn"></a>
                         <a href="tel:+16073043587" target="_blank"><img src="/static/media/phone.png" alt="Phone"></a>
                         <a href="mailto:nathan.melfi@prudential.com" target="_blank"><img src="/static/media/email.png"
                                 alt="Email"></a>
@@ -190,7 +211,7 @@
                         In the industry since 2012 // Joined Finger Lakes Financial Group in 2015
                     </p>
                     <div class="socials">
-                        <a href="#" target="_blank"><img src="/static/media/linkedin.png" alt="LinkedIn"></a>
+                        <a href="https://www.linkedin.com/in/raymond-o-bannion" target="_blank"><img src="/static/media/linkedin.png" alt="LinkedIn"></a>
                         <a href="https://www.letsmakeaplan.org/find-a-cfp-professional/certified-professional-profile/0b2a2138-f921-4c14-b8c2-83442d03a0b6"
                             target="_blank"><img src="/static/media/cfp.png" alt="CFP.net"></a>
                         <a href="tel:+16073796058" target="_blank"><img src="/static/media/phone.png" alt="Phone"></a>
@@ -242,88 +263,30 @@
 
           <div style="text-align: center; margin-top: 20px;">
               <p><b>Check the background of investment professionals associated with this site on FINRA'S
-                  <a href="https://brokercheck.finra.org" style="color: blue;">BrokerCheck</a>.</b>
+                  <a href="https://brokercheck.finra.org" target="_blank" style="color: blue;">BrokerCheck</a>.</b>
               </p>
           </div>
 
         </div>
 
-        <div class="et-hero-tabs-container">
-            <a href="/#open" class="et-hero-tab" id="back">BACK</a>
-            <a href="#" class="et-hero-tab" id="disclosures">DISCLOSURES</a>
+        <div style="width: 100%; padding: 5px 10px; box-sizing: border-box; font-size: 0.4em; text-align: left; background-color: white; color: #555; border-top: 1px solid #ddd; position: fixed; bottom: 0; left: 0; z-index: 3;">
+            <p style="margin: 0; line-height: 1.15;">
+                <b>The financial planners listed are Financial Planners with and offer securities and investment advisory services offered through LPL Enterprise, a Registered Investment
+                            Advisor, Member
+                            <a href="https://www.finra.org" target="_blank" style="color: blue;">FINRA</a>/<a href="https://www.sipc.org" target="_blank" style="color: blue;">SIPC</a>, and an affiliate of LPL Financial.</b>
+
+                            LPL Enterprise and LPL Financial are not affiliated with Finger Lakes Financial Group or Prudential.
+                            Financial professionals are licensed insurance agents of Prudential. These financial professionals are permitted to brand under "Prudential."
+                            The LPL Enterprise registered representative(s) associated with this website may discuss and/or transact business only with residents of the states in which they are
+                            properly registered or licensed. No offers may be made or accepted from any resident of any other state.
+
+                            Check the background of investment professionals associated with this site on FINRA's
+                            <a href="https://brokercheck.finra.org" target="_blank" style="color: blue;">BrokerCheck</a>.         
+                    <a href="https://www.lpl.com/lpl-enterprise.html" target="_blank" style="color: blue;">LPL Enterprise Form CRS</a>
+            </p>
         </div>
         
-        <!-- Disclosures Modal -->
-        <div id="modal-container" modal-id="disclosures">
-            <div class="modal-background">
-                <div class="modal">
-                    <p>
-                       <b>Paul Sypher, Raymond O'Bannion, Christopher Saunders, Nathan Melfi, and John Ward
-                        are financial planners with, and  offers securities and investment advisory
-                        services through, LPL Enterprise (LPLE), a Registered Investment Advisor, member
-                        <a href="https://www.finra.org" target="_blank" style="color: blue;">FINRA</a>/<a href="https://www.sipc.org" target="_blank" style="color: blue;">SIPC</a>, and an affiliate of LPL Financial.</b>
-                        
-                        <br><br>Financial professionals are licensed insurance agents of Prudential. These 
-                        financial professionals are permitted to brand under 'Prudential.' LPLE
-                        and LPL Financial are not affiliated with Finger Lakes Financial Group or
-                        Prudential. 
-                        <br><br>Licenses and State Registrations:
-                        <br>Securities: AZ, CA, CO, CT, DC, FL, GA, HI, MA, MI, NC, NV, NY, OH, PA, RI, SC, TN, TX,
-                        VA,
-                        WA
-                        <br>Life Insurance: FL, GA, MA, MI, NC, NJ, NY, PA, TN, TX, VA, WY
-                        <br>Variable Life Insurance: FL, GA, MA, MI, NC, NY, PA, TN, TX, VA
-                        <br>Mutual Funds: AZ, CA, CO, CT, DC, FL, GA, HI, MA, MI, NC, NV, NY, OH, PA, RI, SC, TN,
-                        TX,
-                        VA, WA
-                        <br>Fixed Annuities: FL, GA, MA, MI, NC, NY, PA, TN, TX, VA
-                        <br>Variable Annuities: FL, GA, MA, MI, NC, NY, PA, TN, TX, VA
-
-                        <br><br>The LPL Enterprise registered representative(s) associated with this website may discuss and/or transact business only
-                        with residents of the states in which they are properly registered or licensed. No offers may be made or accepted from any 
-                        resident of any other state. 
-
-                        <br><br>eMoney is intended for informational purposes only and is not intended to replace
-                        official account statements from the sponsor or custodian. As always, you should refer to
-                        your
-                        official account statements to compile a complete and accurate inventory of your accounts.
-                        You
-                        are also strongly encouraged to review your official account statements and compare them
-                        against
-                        the values and other information contained on your eMoney website. In the case of any
-                        discrepancy, you should rely on your official account statements as the most accurate source
-                        of
-                        information. Questions regarding any account listed should be directed to the customer
-                        contact
-                        information identified on the official account statement. Assets may not be covered by SIPC.
-                        
-                        <br><br>Asset allocation does not ensure a profit or protect against a loss.                
-                        <br><br><a href="https://www.lpl.com/lpl-enterprise.html" target="_blank" style="color: blue;">LPL Enterprise Form CRS</a> 
-                    </p>
-                </div>
-            </div>
-        </div>
-        
-        <script src="/static/js/desktop/advisors_desktop.js"></script>
-        <script>
-            // Modal functionality
-            const openEls = document.querySelectorAll("#disclosures");
-            const modalEls = document.querySelectorAll('#modal-container[modal-id="disclosures"]');
-            
-            openEls.forEach(el => {
-                el.addEventListener('click', function() {
-                    const modalId = this.id;
-                    const modalElem = document.querySelector(`#modal-container[modal-id="${modalId}"]`);
-                    modalElem.classList.add('six');
-                });
-            });
-            
-            modalEls.forEach(el => {
-                el.addEventListener('click', function() {
-                    this.classList.remove('six');
-                });
-            });
-        </script>
+          <script src="/static/js/desktop/advisors_desktop.js"></script>
     </body>
 
 </div>
