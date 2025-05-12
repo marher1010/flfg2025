@@ -89,8 +89,9 @@
     </div>
 
     <div class="text">
-        <div style="width: 100%; padding: 5px 10px; box-sizing: border-box; font-size: 0.6em; text-align: left; background-color: white; color: #555; border-bottom: 1px solid #ddd; position: fixed; top: 0; left: 0; z-index: 1001;">
-            <p style="margin: 0; line-height: 1.15;">
+        <div id="disclosure-header" style="width: 100%; padding: 5px 10px; box-sizing: border-box; font-size: 1rem; text-align: left; background-color: white; color: #000; border-bottom: 1px solid #ddd; position: fixed; top: 0; left: 0; z-index: 1001;">
+            <span id="close-disclosure" style="position: absolute; top: 5px; right: 15px; cursor: pointer; font-weight: bold; font-size: 1.2rem;">&times;</span>
+            <p style="margin: 0; line-height: 1.25;">
                 <b>The financial planners listed are Financial Planners with and offer securities and investment advisory services offered through LPL Enterprise, a Registered Investment
                             Advisor, Member
                             <a href="https://www.finra.org" target="_blank" style="color: blue;">FINRA</a>/<a href="https://www.sipc.org" target="_blank" style="color: blue;">SIPC</a>, and an affiliate of LPL Financial.</b>
@@ -284,7 +285,10 @@
     <!-- SCRIPTS -->
     <script src="/static/js/desktop/services_desktop.js"></script>
     <script>
-        // Modal functionality (Removed)
+        // Close disclosure button functionality
+        document.getElementById('close-disclosure').addEventListener('click', function() {
+            document.getElementById('disclosure-header').style.display = 'none';
+        });
     </script>
     <!-- /SCRIPTS -->
 
